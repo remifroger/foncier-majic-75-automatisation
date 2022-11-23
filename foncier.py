@@ -137,53 +137,43 @@ if clean_schema:
             'travail.parcelle_cadastrale_75_2022'
         ]
 
-        # Import du Sirene
-        sireneulzipurl = 'https://files.data.gouv.fr/insee-sirene/StockUniteLegale_utf8.zip'
-        sireneetabzipurl = 'https://files.data.gouv.fr/insee-sirene/StockEtablissement_utf8.zip'
+        # Import des sources URL - ne fonctionne que pour des ZIP, avec un seul fichier dans le ZIP (à améliorer)
+        # obj['src'] correspond à l'URL
+        # obj['extract'] correspond au nom du fichier à extraire (on ne peut donc extraire qu'un fichier de l'archive) 
+        # obj['out'] correspond au point d'arrivée dans la BDD PostgreSQL
+        urlImport = [
+            { 'src': 'https://files.data.gouv.fr/insee-sirene/StockUniteLegale_utf8.zip', 'extract': 'StockUniteLegale_utf8.csv', 'out': 'donnees_bases.sirene_insee_ul' },
+            { 'src': 'https://files.data.gouv.fr/insee-sirene/StockEtablissement_utf8.zip', 'extract': 'StockEtablissement_utf8.csv', 'out': 'donnees_bases.sirene_insee_etab' },
+        ]
 
-        if not os.path.exists(os.path.join(PATHSOURCE, 'sirene')):
-            os.mkdir(os.path.join(PATHSOURCE, 'sirene'))
+        if not os.path.exists(os.path.join(PATHSOURCE, 'downloads')):
+            os.mkdir(os.path.join(PATHSOURCE, 'downloads'))
 
         def download_file_to_memory(url):
-            print('Téléchargement du Sirene sur {0}'.format(url))
+            print('Téléchargement de {0}'.format(url))
             with request.urlopen(url) as response:
                 return io.BytesIO(response.read())
 
         def extract_all(packed_format):
-            print('Extraction du Sirene (ZIP) dans {0}/sirene'.format(PATHSOURCE))
-            packed_format.extractall(path = os.path.join(PATHSOURCE, 'sirene'))
+            print('Extraction dans {0}/downloads'.format(PATHSOURCE))
+            packed_format.extractall(path = os.path.join(PATHSOURCE, 'downloads'))
 
         def extract_zip(byte_obj):
             with zipfile.ZipFile(byte_obj) as zip:
                 extract_all(zip)
-
-        try:
-            sirene_ul_cached = download_file_to_memory(sireneulzipurl)
-            extract_zip(sirene_ul_cached)
-        except (ValueError, URLError):
-            print(URLError)
-            
-        try:
-            sirene_etab_cached = download_file_to_memory(sireneetabzipurl)
-            extract_zip(sirene_etab_cached)
-        except (ValueError, URLError):
-            print(URLError)
-
-        try:
-            # Import des données Sirene UL
-            print('Import du Sirene UL')
-            subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), '{0}/sirene/StockUniteLegale_utf8.csv'.format(PATHSOURCE), '-overwrite', '-nln', 'donnees_bases.sirene_insee_ul'])
-            print('Sirene UL importé')
-        except subprocess.CalledProcessError as e:
-            print(e.output)
-            
-        try:
-            # Import des données Sirene établissements
-            print('Import du Sirene établissements')
-            subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), '{0}/sirene/StockEtablissement_utf8.csv'.format(PATHSOURCE), '-overwrite', '-nln', 'donnees_bases.sirene_insee_etab'])
-            print('Sirene établissements importé')
-        except subprocess.CalledProcessError as e:
-            print(e.output)
+        for el in urlImport:
+            try:
+                sirene_ul_cached = download_file_to_memory(el['src'])
+                extract_zip(sirene_ul_cached)
+            except (ValueError, URLError):
+                print(URLError)
+            try:
+                # Import des données Sirene UL
+                print('Import de {0}'.format(el['extract']))
+                subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), '{0}/downloads/{1}'.format(PATHSOURCE, el['extract']), '-overwrite', '-nln', el['out']])
+                print('{0} importé'.format(el['extract']))
+            except subprocess.CalledProcessError as e:
+                print(e.output)
 
         # Import des tables du serveur Apur
         for t in tables_dependencies:  

@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="foncier_schema_procedure.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0544998"
+     inkscape:cx="299.19399"
+     inkscape:cy="667.61511"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5642" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <rect
+       x="97.901953"
+       y="977.67841"
+       width="598.81126"
+       height="97.231392"
+       id="rect3761" />
+    <rect
+       x="105.27813"
+       y="974.99616"
+       width="598.1407"
+       height="94.549147"
+       id="rect3755" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#616161;stroke-width:0.308796;stroke-opacity:1"
+       id="rect848"
+       width="38.872345"
+       height="44.080925"
+       x="27.140007"
+       y="-103.85267" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#616161;stroke-width:0.340319;stroke-dasharray:none;stroke-opacity:1"
+       id="rect848-1"
+       width="166.90265"
+       height="150.44391"
+       x="23.082907"
+       y="36.520981" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#616161;stroke-width:0.308796;stroke-opacity:1"
+       id="rect848-8"
+       width="38.872345"
+       height="44.080925"
+       x="86.81163"
+       y="-103.61903" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.001px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.312563;stroke-opacity:1"
+       x="32.885715"
+       y="125.43515"
+       id="text1609"><tspan
+         sodipodi:role="line"
+         id="tspan1607"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.001px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.312563;stroke-opacity:1"
+         x="32.885715"
+         y="125.43515">Dossier des procédures PL/pgSQL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.001px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.312563;stroke-opacity:1"
+       x="28.02832"
+       y="198.14658"
+       id="text1609-59"><tspan
+         sodipodi:role="line"
+         id="tspan1607-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.001px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.312563;stroke-opacity:1"
+         x="28.02832"
+         y="198.14658">L'exécuteur Python</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.33483px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.333427;stroke-opacity:1"
+       x="107.30379"
+       y="15.694858"
+       id="text1609-1"><tspan
+         sodipodi:role="line"
+         id="tspan1607-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.333427;stroke-opacity:1"
+         x="107.30379"
+         y="15.694858">Automatisation de la mise à jour des fichiers fonciers</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.333427;stroke-opacity:1"
+         x="107.30379"
+         y="22.699734"
+         id="tspan7153">GitHub : https://github.com/remifroger/foncier-majic-75-automatisation</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.333427;stroke-opacity:1"
+         x="107.30379"
+         y="29.368271"
+         id="tspan7155" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+       x="46.819847"
+       y="-97.204536"
+       id="text1609-2"><tspan
+         sodipodi:role="line"
+         id="tspan1607-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="46.819847"
+         y="-97.204536">geocoding.py</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20744px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="46.819847"
+         y="-92.088348"
+         id="tspan2899">(coeur du script)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+       x="46.724312"
+       y="-77.72921"
+       id="text1609-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan1607-3-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="46.724312"
+         y="-77.72921">main.py</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20744px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="46.724312"
+         y="-72.613022"
+         id="tspan2901">(noeud d'appel)</tspan></text>
+    <a
+       id="a6704"
+       xlink:href="https://github.com/Atelier-parisien-d-urbanisme/geocodeur"
+       target="_blank"
+       transform="matrix(0.78378927,0,0,0.78378927,-37.805409,-160.18701)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+         x="107.76636"
+         y="149.93933"
+         id="text1609-2-7-1"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+           x="107.76636"
+           y="149.93933"
+           id="tspan2901-1">Client</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+           x="107.76636"
+           y="156.46683"
+           id="tspan6651">via console Python,</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+           x="107.76636"
+           y="162.99432"
+           id="tspan6698">voir doc.</tspan></text>
+    </a>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+       x="17.187408"
+       y="-99.558334"
+       id="text1609-2-7-4"><tspan
+         sodipodi:role="line"
+         id="tspan1607-3-4-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-99.558334">ogr2ogr (depuis QGIS/bin)</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-95.555359"
+         id="tspan2897">pour diverses opérations</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-91.552383"
+         id="tspan2883" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-87.549408"
+         id="tspan2893">ArcPy pour le géocodage</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-83.546432"
+         id="tspan2895">interne</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-79.543457"
+         id="tspan2885" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-75.540482"
+         id="tspan2891">PostgreSQL/PostGIS (dont</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-71.537506"
+         id="tspan2887">SQL Shell) pour stockage</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20238px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.200149;stroke-opacity:1"
+         x="17.187408"
+         y="-67.534538"
+         id="tspan2889">temporaire</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.01146px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.188215;stroke-opacity:1"
+       x="40.325005"
+       y="-83.132416"
+       id="text1609-2-7-4-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.01146px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.188215;stroke-opacity:1"
+         x="40.325005"
+         y="-83.132416"
+         id="tspan2889-6">Dépendances</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-2"
+       width="6.489769"
+       height="4.5231724"
+       x="42.937363"
+       y="-69.661621" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353"
+       width="6.489769"
+       height="4.5231724"
+       x="43.035698"
+       y="-88.906708" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#939393;stroke-width:0.423723;stroke-opacity:1"
+       id="rect848-2"
+       width="73.382843"
+       height="43.966"
+       x="32.83466"
+       y="136.17169" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="32.863663"
+       y="132.77943"
+       id="text1609-2-77"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="32.863663"
+         y="132.77943"
+         id="tspan2899-6">path/to/foncier/sql/01_majic3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="47.216022"
+       y="145.15906"
+       id="text1609-2-77-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="47.216022"
+         y="145.15906"
+         id="tspan2899-6-1">01_import</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;line-height:3px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="37.453159"
+       y="69.616539"
+       id="text1609-2-77-2-99"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="69.616539"
+         id="tspan2899-6-1-01">diffusion.batiment</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="72.922432"
+         id="tspan745">diffusion.dependance</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         sodipodi:role="line"
+         id="tspan763"
+         x="37.453159"
+         y="76.228325">diffusion.local_activite</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="79.534218"
+         id="tspan749">diffusion.logement</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="82.840111"
+         id="tspan751">diffusion.parcelle_cadastrale_alpha</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="86.145996"
+         id="tspan753">diffusion.proprietaire</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="89.451889"
+         id="tspan755">diffusion.syndic</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="92.757782"
+         id="tspan757">diffusion.parcelle_cadastrale</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="96.063675"
+         id="tspan759">observatoire.rpls_logement</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="37.453159"
+         y="99.369568"
+         id="tspan761">travail.parcelle_cadastrale_75_2022*</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52993px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+       x="98.411827"
+       y="142.81287"
+       id="text1609-2-77-2-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="98.411827"
+         y="142.81287"
+         id="tspan2899-6-1-0">01_xxx.sql</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52993px;line-height:3px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+       x="115.97543"
+       y="141.24928"
+       id="text1609-2-77-2-4-77"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="115.97543"
+         y="141.24928"
+         id="tspan7826">Chaque dossier contient plusieurs fichiers </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="115.97543"
+         y="144.47357"
+         id="tspan7830">SQL exécutables avec des paramètres</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#006bf6;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="115.97543"
+         y="147.69786"
+         id="tspan7832">psql -f 01_xxx.sql -v schemaname=monschema -v annee=2022</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52993px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+       x="98.411827"
+       y="145.73198"
+       id="text1609-2-77-2-4-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="98.411827"
+         y="145.73198"
+         id="tspan2899-6-1-0-4">02_xxx.sql</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52993px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+       x="98.411827"
+       y="148.65106"
+       id="text1609-2-77-2-4-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="98.411827"
+         y="148.65106"
+         id="tspan2899-6-1-0-2">03_xxx.sql</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="47.216022"
+       y="151.94121"
+       id="text1609-2-77-2-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="47.216022"
+         y="151.94121"
+         id="tspan2899-6-1-1">02_creation_tables_finales</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-0"
+       width="6.489769"
+       height="4.5231724"
+       x="37.167858"
+       y="141.58507" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-0-2"
+       width="6.489769"
+       height="4.5231724"
+       x="37.167858"
+       y="148.50981" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-0-0"
+       width="6.489769"
+       height="4.5231724"
+       x="37.167858"
+       y="155.43456" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-0-4"
+       width="6.489769"
+       height="4.5231724"
+       x="37.167858"
+       y="162.3593" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-0-3"
+       width="6.489769"
+       height="4.5231724"
+       x="37.167858"
+       y="169.28403" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207753;stroke-opacity:1"
+       d="M 43.064587,-86.762285 H 20.366643"
+       id="path2799" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.217876"
+       d="m 21.690613,-87.813204 -1.415096,0.980447 1.30624,1.127516"
+       id="path6435" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+       x="106.79613"
+       y="-97.30246"
+       id="text1609-2-9"><tspan
+         sodipodi:role="line"
+         id="tspan1607-3-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="106.79613"
+         y="-97.30246">Serveur Node.js</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20744px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="106.79613"
+         y="-92.186272"
+         id="tspan2899-1">(coeur du script)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09295px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+       x="106.80182"
+       y="-66.389999"
+       id="text1609-2-9-3"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.20744px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.255809;stroke-opacity:1"
+         x="106.80182"
+         y="-66.389999"
+         id="tspan2899-1-3">Client web</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72427px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.170266;stroke-opacity:1"
+       x="97.253891"
+       y="-88.467064"
+       id="text1609-2-7-4-7-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.72427px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.170266;stroke-opacity:1"
+         x="97.253891"
+         y="-88.467064"
+         id="tspan2889-6-5">Appel du script Python</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.47577px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:end;text-anchor:end;white-space:pre;inline-size:39.3564;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.217235;stroke-opacity:1"
+       x="221.79448"
+       y="107.49712"
+       id="text1609-2-7-4-7-5-5"
+       transform="matrix(0.78378927,0,0,0.78378927,-37.249172,-159.76983)"><tspan
+         x="221.79448"
+         y="107.49712"
+         id="tspan6544">GET api/startGeocoding</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.207377;stroke-opacity:1"
+       id="rect2353-9"
+       width="6.489769"
+       height="4.5231724"
+       x="103.01198"
+       y="-89.004631" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.217876"
+       d="m 69.82073,-68.639609 -1.4151,0.98044 1.30624,1.12752"
+       id="path6435-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.217876"
+       d="m 51.751786,-87.785063 -1.415093,0.980447 1.30624,1.127517"
+       id="path6435-9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.217876"
+       d="m 48.202138,-56.293866 -0.980442,-1.41508 -1.127521,1.30623"
+       id="path6435-9-3" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.207377"
+       d="m 49.363988,-67.904449 9.292152,0.0491 -0.0491,-18.977659 -8.210528,0.04917"
+       id="path6491" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.207377"
+       d="m 47.299056,-46.173576 -0.09833,-11.40625"
+       id="path6653" />
+    <a
+       id="a6704-1"
+       xlink:href="https://github.com/Atelier-parisien-d-urbanisme/geocodeur"
+       target="_blank"
+       transform="matrix(0.78378927,0,0,0.78378927,21.744206,-159.95864)"
+       style="fill:#000000;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+         x="107.23719"
+         y="150.46849"
+         id="text1609-2-7-1-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+           x="107.23719"
+           y="150.46849"
+           id="tspan6698-9">Utilisateur web</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+           x="107.74872"
+           y="156.99599"
+           id="tspan8440">via URL </tspan></text>
+    </a>
+    <a
+       id="a6704-1-9"
+       xlink:href="https://github.com/Atelier-parisien-d-urbanisme/geocodeur"
+       target="_blank"
+       transform="matrix(0.83610902,0,0,0.83610902,-70.308505,165.26183)"
+       style="fill:#000000;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+         x="97.035614"
+         y="150.46849"
+         id="text1609-2-7-1-2-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.09222px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326375;stroke-opacity:1"
+           x="97.035614"
+           y="150.46849"
+           id="tspan6698-9-0">Rémi Froger, 04/11/2022</tspan></text>
+    </a>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.217876"
+       d="m 107.75174,-56.065496 -0.98044,-1.41508 -1.12752,1.30622"
+       id="path6435-9-3-56" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.207377"
+       d="m 106.84866,-45.945216 -0.0983,-11.40624"
+       id="path6653-9" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.217876"
+       d="m 107.72772,-81.154649 -0.98045,-1.415096 -1.12752,1.306243"
+       id="path6435-9-3-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.207377"
+       d="m 106.82463,-71.034369 -0.0983,-11.406254"
+       id="path6653-4" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.207377"
+       d="M 102.90456,-86.537961 H 76.94549 v 18.879322 l -8.42756,-0.007"
+       id="path6875"
+       sodipodi:nodetypes="cccc" />
+    <rect
+       style="fill:#e7e7e7;fill-opacity:1;stroke:none;stroke-width:0.152757"
+       id="rect7364"
+       width="176.88708"
+       height="0.17741933"
+       x="19.096722"
+       y="29.556919" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="47.216022"
+       y="158.69389"
+       id="text1609-2-77-2-94"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="47.216022"
+         y="158.69389"
+         id="tspan2899-6-1-3">03_traitements_proprietaire</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="47.216022"
+       y="165.47047"
+       id="text1609-2-77-2-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="47.216022"
+         y="165.47047"
+         id="tspan2899-6-1-2">04_tables_stat</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="47.216022"
+       y="172.23236"
+       id="text1609-2-77-2-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="47.216022"
+         y="172.23236"
+         id="tspan2899-6-1-4">05_adaptation_donnees_mairie</tspan></text>
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.623661;stroke-opacity:1"
+       id="path5534"
+       cx="66.444534"
+       cy="144.38478"
+       r="0.68999934" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+       d="m 66.507261,144.38455 h 29.7327"
+       id="path5644" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-dasharray:none;stroke-opacity:1"
+       d="m 97.746694,139.54707 h -1.419346 v 10.60078 l 1.463706,-0.0222"
+       id="path7797" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.001px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.312563;stroke-opacity:1"
+       x="34.360489"
+       y="48.174278"
+       id="text1609-5"><tspan
+         sodipodi:role="line"
+         id="tspan1607-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.001px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.312563;stroke-opacity:1"
+         x="34.360489"
+         y="48.174278">Données sources </tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#939393;stroke-width:0.310025;stroke-opacity:1"
+       id="rect848-2-5"
+       width="76.758354"
+       height="22.501537"
+       x="102.49503"
+       y="62.86842" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="102.64459"
+       y="59.918056"
+       id="text1609-2-77-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="102.64459"
+         y="59.918056"
+         id="tspan2899-6-0">path/to/src/majic</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.07911px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254944;stroke-opacity:1"
+       x="34.348797"
+       y="59.523693"
+       id="text1609-2-77-1-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.19659px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254944;stroke-opacity:1"
+         x="34.348797"
+         y="59.523693"
+         id="tspan2899-6-0-9">Données provenant des serveurs de prod.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.12046px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.320028;stroke-opacity:1"
+       x="102.76218"
+       y="55.240147"
+       id="text1609-2-77-1-8"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.01265px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.320028;stroke-opacity:1"
+         x="102.76218"
+         y="55.240147"
+         id="tspan2899-6-0-1">Sources réceptionnées par EF ou AB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81791px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+       x="106.61939"
+       y="69.004341"
+       id="text1609-2-77-2-4-17"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77556px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+         x="106.61939"
+         y="69.004341"
+         id="tspan2899-6-1-0-3">ART.DC21.W22758.PROP.A2022.?000627</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52993px;line-height:3px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+       x="129.01936"
+       y="59.805424"
+       id="text1609-2-77-2-4-77-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="129.01936"
+         y="59.805424"
+         id="tspan7832-7">(Données sources extraites de chaque ZIP)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52993px;line-height:3px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+       x="36.579887"
+       y="108.34628"
+       id="text1609-2-77-2-4-77-2-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.76623px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.22062;stroke-opacity:1"
+         x="36.579887"
+         y="108.34628"
+         id="tspan7832-7-9">* Données géographiques de la mairie de Paris</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81791px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+       x="106.61939"
+       y="72.988579"
+       id="text1609-2-77-2-4-1-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77556px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+         x="106.61939"
+         y="72.988579"
+         id="tspan2899-6-1-0-4-7">ART.DC21.W22758.PDLL.A2022.?000627</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81791px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+       x="106.61939"
+       y="76.972763"
+       id="text1609-2-77-2-4-7-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77556px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+         x="106.61939"
+         y="76.972763"
+         id="tspan2899-6-1-0-2-2">ART.DC21.W22758.NBAT.A2022.?000627</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81791px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+       x="106.56424"
+       y="80.950676"
+       id="text1609-2-77-2-4-7-6-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77556px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+         x="106.56424"
+         y="80.950676"
+         id="tspan2899-6-1-0-2-2-1">...</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#939393;stroke-width:0.381043;stroke-opacity:1"
+       id="rect848-2-5-0"
+       width="63.640076"
+       height="40.997776"
+       x="33.875031"
+       y="62.767994" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.12046px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.320028;stroke-opacity:1"
+       x="34.106667"
+       y="55.104214"
+       id="text1609-2-77-1-8-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.01265px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.320028;stroke-opacity:1"
+         x="34.106667"
+         y="55.104214"
+         id="tspan2899-6-0-1-3">Sources zpostgresig</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;line-height:3px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="106.704"
+       y="106.72371"
+       id="text1609-2-77-2-99-1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="106.704"
+         y="106.72371"
+         id="tspan761-9">sirene</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.07911px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254944;stroke-opacity:1"
+       x="103.59964"
+       y="97.160011"
+       id="text1609-2-77-1-4-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.19659px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.254944;stroke-opacity:1"
+         x="103.59964"
+         y="97.160011"
+         id="tspan2899-6-0-9-7">Données provenant d'URL</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#939393;stroke-width:0.20051;stroke-opacity:1"
+       id="rect848-2-5-0-0"
+       width="63.82061"
+       height="11.320156"
+       x="103.03562"
+       y="100.31406" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="28.181103"
+       y="207.39587"
+       id="text1609-2-77-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="28.181103"
+         y="207.39587"
+         id="tspan2899-6-9">path/to/script (https://github.com/remifroger/foncier-majic-75-automatisation)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;line-height:4px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="26.6689"
+       y="241.95055"
+       id="text1609-2-77-5-7"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="26.6689"
+         y="241.95055"
+         id="tspan2899-6-9-3">Le script s'occupe des imports, crée un schéma de travail (test_schema_pgsql dans l'exemple) et</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="26.6689"
+         y="246.25644"
+         id="tspan3998">exécute l'ensemble des procédures SQL (path/to/foncier/sql/01_majic3) en fonction de l'année</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="26.6689"
+         y="250.56233"
+         id="tspan4000">indiquée (ici 2022).</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="26.6689"
+         y="254.86823"
+         id="tspan4002">Chaque fichier (procédure) SQL est modifiable, veillez à bien utiliser et respecter les variables indiquées</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="26.6689"
+         y="259.1741"
+         id="tspan4004">en entête de chaque fichier. Dans foncier.py, les tables à importer depuis zpostgresig sont personnalisables </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="26.6689"
+         y="263.48001"
+         id="tspan4736">via la variable tables_dependencies ; les fichiers à importer depuis URL via la variable urlImport.</tspan></text>
+    <rect
+       style="fill:#414141;fill-opacity:1;stroke:#000000;stroke-width:0.366649;stroke-opacity:1"
+       id="rect848-2-5-0-0-7"
+       width="136.41803"
+       height="17.708088"
+       x="26.927107"
+       y="215.88918" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.12046px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.320028;stroke-opacity:1"
+       x="103.35751"
+       y="92.740532"
+       id="text1609-2-77-1-8-1-9"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.01265px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.320028;stroke-opacity:1"
+         x="103.35751"
+         y="92.740532"
+         id="tspan2899-6-0-1-3-2">Sources externes</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81791px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+       x="37.254211"
+       y="81.287766"
+       id="text1609-2-77-2-4-17-6"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77556px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.301118;stroke-opacity:1"
+         x="37.254211"
+         y="81.287766"
+         id="tspan2899-6-1-0-3-4" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.81423px;line-height:6px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+       x="30.261507"
+       y="222.59378"
+       id="text1609-2-77-2-99-1-5"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="30.261507"
+         y="222.59378"
+         id="tspan1043">python &quot;path/to/script/foncier.py&quot; -s test_schema_pgsql -a 2022 -f &quot;path/to/src/majic&quot; </tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="30.261507"
+         y="228.89967"
+         id="tspan1963">-sql &quot;path/to/foncier/sql/01_majic3&quot;</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.77267px;font-family:'Baskerville Old Face';-inkscape-font-specification:'Baskerville Old Face';text-align:start;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.300889;stroke-opacity:1"
+         x="30.261507"
+         y="235.20557"
+         id="tspan1041" /></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2172"
+       width="38.325676"
+       height="5.3256798"
+       x="41.337158"
+       y="218.98648" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#00d3ff;stroke-width:0.345285;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2172-6"
+       width="28.267488"
+       height="5.3803945"
+       x="126.47109"
+       y="219.13655" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ffa500;stroke-width:0.442;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2172-6-1"
+       width="47.154705"
+       height="5.2837424"
+       x="35.591999"
+       y="225.57198" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 41.693548,219.16546 c 0,0 -5.062356,-0.59439 -7.096776,-3.90322 -2.03442,-3.30883 -0.887095,-5.67742 -0.887095,-5.67742"
+       id="path3268"
+       sodipodi:nodetypes="czc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#00d3ff;stroke-width:0.4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 154.70967,219.46773 c 0,0 31.81113,-37.6078 33.70968,-73.09676 C 190.3179,110.882 174.75806,82.854835 174.75806,82.854835"
+       id="path3393"
+       sodipodi:nodetypes="czc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#ffa500;stroke-width:0.442;stroke-dasharray:none;stroke-opacity:1"
+       d="m 38.677417,230.91532 c 0,0 -7.693246,9.48293 -14.903225,6.74194 -7.209979,-2.74099 -13.8898699,-20.47994 -12.241935,-32.64516 1.647936,-12.16522 24.306452,-26.79032 24.306452,-26.79032"
+       id="path3622"
+       sodipodi:nodetypes="czzc" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3753"
+       style="font-size:18.6667px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;white-space:pre;shape-inside:url(#rect3755);display:inline;fill:none;fill-opacity:1;stroke:#ffa500;stroke-width:1.67055;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>
