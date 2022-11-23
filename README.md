@@ -1,10 +1,15 @@
 # Procédure de MAJ des données foncières
 
-Exécution de la MAJ des fichiers fonciers. Le script, dans scripts/foncier.py, gère les imports et exécutent les différents fichiers SQL situés dans le dossier 01_majic3
+Exécution de la MAJ des fichiers fonciers. Le script, dans scripts/foncier.py, gère les imports et exécutent les différents fichiers SQL situés dans le dossier 01_majic3.
 
 ## Version
 
 Python 2.7.x
+
+## Pré-requis
+
+Lire la documentation située dans le dossier `doc`
+Puis renseigner les variables d'environnement du fichier .env.sample (et renommer .env.sample en .env en cas d'erreur)
 
 ### Usage
 
