@@ -5,7 +5,12 @@
 """
 Présentation et logique du programme
 ------------------------------------
-
+Le programme accepte 4 arguments (-s, -a, -f, -sql), exécuter 'python foncier.py --help' pour plus de détails
+Et fonctionne avec les variables d'environnement du fichier .env (ou .env.sample) situé dans ce même dossier (bien remplir chaque variable)
+A partir de là, le but est d'importer dans un premier temps toutes les données nécessaires au bon fonctionnement du script (via les variables tables_dependencies et urlImport),
+puis d'exécuter l'ensemble des fichiers SQL du dossier de procédures SQL (argument -sql). 
+Le script est découpé en deux, avant et après la qualification des propriétaires. Ceci permettant de sortir du script afin de qualifier manuellement des propriétaires non classés.
+Puis de repartir du point de sortie pour terminer l'exécution du script.
 """
 
 import os
@@ -20,6 +25,7 @@ from urllib.error import URLError
 import zipfile
 load_dotenv()
 
+# Création des arguments
 parser = argparse.ArgumentParser(description='MAJ des fichiers fonciers Majic 3')
 parser.add_argument("-s", "--schema", required=True, help="Nom du schéma de travail PostgreSQL")
 parser.add_argument("-a", "--annee", required=True, help="Année de MAJ")
@@ -27,14 +33,16 @@ parser.add_argument("-f", "--sourcefile", required=True, help="Chemin vers les s
 parser.add_argument("-sql", "--sqlpathfiles", required=True, help="Chemin vers les scripts SQL")
 args = parser.parse_args()
 
-# Pour permettre de lancer le script de zéro jusqu'à la qualification manuelle des propriétaires
-# Ou de la qualification manuelle des propriétaires jusqu'à la fin
+# Console : recommandation (travail dans un schéma PostgreSQL vide)
 clean_schema = input('Avant de lancer le script, il est préférable que le schéma {0} soit vide, souhaitez-vous poursuivre ? (y/n)'.format(args.schema)).lower().strip() == 'y'
 
 if clean_schema:
     
+    # Pour permettre de lancer le script de zéro jusqu'à la qualification manuelle des propriétaires
+    # Ou de la qualification manuelle des propriétaires jusqu'à la fin
     start_script = input('y: lancement du script à partir du début jusqu\'à la qualification des propriétaires / n : lancement du script après la qualification manuelle des propriétaires ? (y/n): ').lower().strip() == 'y'
     
+    # Chargement des variables d'environnement
     PGBINPATH = os.getenv('PGBINPATH')
     QGISBINPATH = os.getenv('QGISBINPATH')
     PGHOST = os.getenv('PGHOST')
@@ -52,10 +60,10 @@ if clean_schema:
     YEAR = args.annee
     PREVIOUSYEAR = int(YEAR) - 1
     SCHEMANAME = args.schema
-    PATHFILE = 'C:/Users/froger/OneDrive - APUR/data/foncier/01_majic3/01_import/01_chargeprop.sql'
     PATHSOURCE = args.sourcefile
     PATHSQL = args.sqlpathfiles
 
+    # Vérification de la présence des dossiers de procédures SQL
     if not os.path.exists(os.path.join(PATHSQL, '01_import')):
         print("Le dossier 01_import est manquant dans {0}".format(PATHSQL))
         exit()
@@ -72,6 +80,7 @@ if clean_schema:
         print("Le dossier 05_adaptation_donnees_mairie est manquant dans {0}".format(PATHSQL))
         exit()
         
+    # Démarrage
     if start_script:
         
         os.chdir(PGBINPATH)
@@ -85,6 +94,9 @@ if clean_schema:
             print(e.output)
 
         os.chdir(PGBINPATH)
+        # Chaque année, les fichiers réceptionnés et extraits des ZIP ont une nomenclature particulière (exemple : ART.DC21.W22758.PDLL.A2022.N000627)
+        # On recrée le nom de chaque fichier à partir de CODESRC, TYPEFILES, CODEFILES
+        # On ajoute chaque fichier dans list_import
         CODESRC = 'N000627'
         TYPEFILES = ['PROP', 'PDLL', 'NBAT', 'LLOC', 'BATI']
         CODEFILES = ['754', '755', '756', '757', '758']
@@ -103,7 +115,8 @@ if clean_schema:
                     list_import.append("\COPY {0}.charglot FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
                 elif t == 'BATI':
                     list_import.append("\COPY {0}.chargebatiglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
-                
+        
+        # On importe dans PostgreSQL chaque fichier de list_import      
         try:
             for import_query in list_import:
                 print('Exécution de l''import de {0}'.format(import_query))
@@ -111,6 +124,7 @@ if clean_schema:
         except subprocess.CalledProcessError as e:
             print(e.output)
 
+        # Exécution des scripts SQL du dossier 01_import
         print('Exécution des scripts SQL 01_import')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '01_import')):
             pathfile = os.path.join(PATHSQL, '01_import', sqlfile)
@@ -122,7 +136,7 @@ if clean_schema:
                     except subprocess.CalledProcessError as e:
                         print(e.output)
         
-        # Transfert ogr2ogr des données de base
+        # Transfert ogr2ogr des données de base présentes dans les schémas de production : diffusion, observatoire, travail
         os.chdir(QGISBINPATH)
         tables_dependencies = [
             'diffusion.batiment',
@@ -161,6 +175,8 @@ if clean_schema:
         def extract_zip(byte_obj):
             with zipfile.ZipFile(byte_obj) as zip:
                 extract_all(zip)
+        
+        # Pour chaque URL de urlImport, on extrait le fichier, puis on l'importe dans PostgreSQL
         for el in urlImport:
             try:
                 sirene_ul_cached = download_file_to_memory(el['src'])
@@ -175,7 +191,7 @@ if clean_schema:
             except subprocess.CalledProcessError as e:
                 print(e.output)
 
-        # Import des tables du serveur Apur
+        # Import des tables de tables_dependencies
         for t in tables_dependencies:  
             try:
                 print('Import de {0}'.format(t))
@@ -240,17 +256,16 @@ if clean_schema:
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                     except subprocess.CalledProcessError as e:
                         print(e.output)
-        """
+
         print('Exécution des scripts SQL 05_adaptation_donnees_mairie')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '05_adaptation_donnees_mairie')):
             pathfile = os.path.join(PATHSQL, '05_adaptation_donnees_mairie', sqlfile)
-            if (sqlfile.startswith("0") and sqlfile.endswith(".sql") and os.path.isfile(pathfile)) or sqlfile == '01_correction_nsqpc_mairieParis.sql':
+            if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile == '01_correction_nsqpc_mairieParis.sql':
                 try:
                     print('Exécution de {0}'.format(pathfile))
                     subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                 except subprocess.CalledProcessError as e:
                     print(e.output)
-        """
 
     print('Terminé')
 if not clean_schema:
