@@ -206,7 +206,7 @@ if clean_schema:
                 print('{0} importé'.format(t))
             except subprocess.CalledProcessError as e:
                 print(e.output)
-        
+
         os.chdir(PGBINPATH)
         print('Exécution des scripts SQL 02_creation_tables_finales')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '02_creation_tables_finales')):
@@ -218,7 +218,7 @@ if clean_schema:
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                     except subprocess.CalledProcessError as e:
                         print(e.output)
-
+        
         os.chdir(PGBINPATH)        
         print('Exécution des scripts SQL 03_traitements_proprietaire')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '03_traitements_proprietaire')):
@@ -231,10 +231,12 @@ if clean_schema:
                     except subprocess.CalledProcessError as e:
                         print(e.output)
         print('A vous de jouer maintenant, place à la qualification manuelle des propriétaires (select * from {0}.proprietaire_75_{1}). Une fois la qualification terminée, relancez ce script en répondant "n" à la question "Lancez-vous le script du début ?"'.format(SCHEMANAME, YEAR))
+        
     if not start_script:
+
         print('Exécution du script à partir de la qualification manuelle des propriétaires')
         os.chdir(PGBINPATH)    
-
+        
         print('Exécution des scripts SQL 03_traitements_proprietaire')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '03_traitements_proprietaire')):
             pathfile = os.path.join(PATHSQL, '03_traitements_proprietaire', sqlfile)
@@ -245,7 +247,7 @@ if clean_schema:
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                     except subprocess.CalledProcessError as e:
                         print(e.output)
-
+        
         print('Exécution des scripts SQL 04_tables_stat')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '04_tables_stat')):
             pathfile = os.path.join(PATHSQL, '04_tables_stat', sqlfile)
@@ -260,7 +262,7 @@ if clean_schema:
         print('Exécution des scripts SQL 05_adaptation_donnees_mairie')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '05_adaptation_donnees_mairie')):
             pathfile = os.path.join(PATHSQL, '05_adaptation_donnees_mairie', sqlfile)
-            if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile == '01_correction_nsqpc_mairieParis.sql':
+            if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and (sqlfile == '01_correction_nsqpc_mairieParis.sql' or sqlfile == '02_renommage_controle_qualite.sql'):
                 try:
                     print('Exécution de {0}'.format(pathfile))
                     subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
