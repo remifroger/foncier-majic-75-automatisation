@@ -147,6 +147,7 @@ if clean_schema:
             'diffusion.proprietaire',
             'diffusion.syndic',
             'diffusion.parcelle_cadastrale',
+            'diffusion.parcelle_cadastrale_stat',
             'observatoire.rpls_logement',
             'travail.parcelle_cadastrale_75_2022'
         ]
@@ -236,7 +237,7 @@ if clean_schema:
 
         print('Exécution du script à partir de la qualification manuelle des propriétaires')
         os.chdir(PGBINPATH)    
-        
+        """"
         print('Exécution des scripts SQL 03_traitements_proprietaire')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '03_traitements_proprietaire')):
             pathfile = os.path.join(PATHSQL, '03_traitements_proprietaire', sqlfile)
@@ -258,11 +259,11 @@ if clean_schema:
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                     except subprocess.CalledProcessError as e:
                         print(e.output)
-
+        """
         print('Exécution des scripts SQL 05_adaptation_donnees_mairie')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '05_adaptation_donnees_mairie')):
             pathfile = os.path.join(PATHSQL, '05_adaptation_donnees_mairie', sqlfile)
-            if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and (sqlfile == '01_correction_nsqpc_mairieParis.sql' or sqlfile == '02_renommage_controle_qualite.sql'):
+            if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and (sqlfile == '01_correction_nsqpc_mairieParis.sql' or sqlfile == '02_controle_qualite.sql' or sqlfile == '03_renommage.sql'):
                 try:
                     print('Exécution de {0}'.format(pathfile))
                     subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
