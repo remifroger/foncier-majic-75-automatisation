@@ -29,7 +29,8 @@ load_dotenv()
 parser = argparse.ArgumentParser(description='MAJ des fichiers fonciers Majic 3')
 parser.add_argument("-s", "--schema", required=True, help="Nom du schéma de travail PostgreSQL")
 parser.add_argument("-a", "--annee", required=True, help="Année de MAJ")
-parser.add_argument("-f", "--sourcefile", required=True, help="Chemin vers les sources de données")
+parser.add_argument("-f", "--sourcefile", required=False, help="Chemin vers les sources de données")
+parser.add_argument("-ff", "--sourceschema", required=False, help="Chemin vers le schéma des sources de données")
 parser.add_argument("-sql", "--sqlpathfiles", required=True, help="Chemin vers les scripts SQL")
 args = parser.parse_args()
 
@@ -61,6 +62,7 @@ if clean_schema:
     PREVIOUSYEAR = int(YEAR) - 1
     SCHEMANAME = args.schema
     PATHSOURCE = args.sourcefile
+    SCHEMASOURCE = args.sourceschema
     PATHSQL = args.sqlpathfiles
 
     # Vérification de la présence des dossiers de procédures SQL
@@ -82,9 +84,9 @@ if clean_schema:
         
     # Démarrage
     if start_script:
-        
         os.chdir(PGBINPATH)
         print('Lancement du script')
+        """
         print('Création des schémas')
         SQLQUERYSCHEMA = ("CREATE SCHEMA IF NOT EXISTS " + str(SCHEMANAME) + "; CREATE SCHEMA IF NOT EXISTS donnees_bases; DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargepropglobal; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargepropglobal (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargpdl; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargpdl (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargenbatglobal; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargenbatglobal (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".charglot; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".charglot (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargebatiglobal; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargebatiglobal (data character varying);")
         try:
@@ -97,32 +99,33 @@ if clean_schema:
         # Chaque année, les fichiers réceptionnés et extraits des ZIP ont une nomenclature particulière (exemple : ART.DC21.W22758.PDLL.A2022.N000627)
         # On recrée le nom de chaque fichier à partir de CODESRC, TYPEFILES, CODEFILES
         # On ajoute chaque fichier dans list_import
-        CODESRC = 'N000627'
-        TYPEFILES = ['PROP', 'PDLL', 'NBAT', 'LLOC', 'BATI']
-        CODEFILES = ['754', '755', '756', '757', '758']
+        if PATHSOURCE:
+            CODESRC = 'N001216'
+            TYPEFILES = ['PROP', 'PDLL', 'NBAT', 'LLOC', 'BATI']
+            CODEFILES = ['754', '755', '756', '757', '758']
 
-        list_import = []
-        
-        for t in TYPEFILES:
-            for c in CODEFILES:
-                if t == 'PROP':
-                    list_import.append("\COPY {0}.chargepropglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
-                elif t == 'PDLL':
-                    list_import.append("\COPY {0}.chargpdl FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
-                elif t == 'NBAT':
-                    list_import.append("\COPY {0}.chargenbatglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
-                elif t == 'LLOC':
-                    list_import.append("\COPY {0}.charglot FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
-                elif t == 'BATI':
-                    list_import.append("\COPY {0}.chargebatiglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.A{1}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
-        
-        # On importe dans PostgreSQL chaque fichier de list_import      
-        try:
-            for import_query in list_import:
-                print('Exécution de l''import de {0}'.format(import_query))
-                subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-c', '{0}'.format(import_query)])
-        except subprocess.CalledProcessError as e:
-            print(e.output)
+            list_import = []
+            
+            for t in TYPEFILES:
+                for c in CODEFILES:
+                    if t == 'PROP':
+                        list_import.append("\COPY {0}.chargepropglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
+                    elif t == 'PDLL':
+                        list_import.append("\COPY {0}.chargpdl FROM '{6}/ART.DC21.W{3}{4}.{5}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
+                    elif t == 'NBAT':
+                        list_import.append("\COPY {0}.chargenbatglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
+                    elif t == 'LLOC':
+                        list_import.append("\COPY {0}.charglot FROM '{6}/ART.DC21.W{3}{4}.{5}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
+                    elif t == 'BATI':
+                        list_import.append("\COPY {0}.chargebatiglobal FROM '{6}/ART.DC21.W{3}{4}.{5}.{2}' delimiter AS '|';".format(SCHEMANAME, YEAR, CODESRC, int(str(YEAR)[-2:]), c, t, PATHSOURCE))
+            
+            # On importe dans PostgreSQL chaque fichier de list_import      
+            try:
+                for import_query in list_import:
+                    print('Exécution de l''import de {0}'.format(import_query))
+                    subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-c', '{0}'.format(import_query)])
+            except subprocess.CalledProcessError as e:
+                print(e.output)
 
         # Exécution des scripts SQL du dossier 01_import
         print('Exécution des scripts SQL 01_import')
@@ -130,13 +133,21 @@ if clean_schema:
             pathfile = os.path.join(PATHSQL, '01_import', sqlfile)
             if os.path.isfile(pathfile):
                 if (sqlfile.startswith("0") and sqlfile.endswith(".sql")):
-                    try:
-                        print('Exécution de {0}'.format(pathfile))
-                        subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR)])
-                    except subprocess.CalledProcessError as e:
-                        print(e.output)
+                    if SCHEMASOURCE:
+                        try:
+                            print('Exécution de {0}'.format(pathfile))
+                            subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'schemasource={0}'.format(SCHEMASOURCE), '-v', 'annee={0}'.format(YEAR)])
+                        except subprocess.CalledProcessError as e:
+                            print(e.output)
+                    else:
+                        try:
+                            print('Exécution de {0}'.format(pathfile))
+                            subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR)])
+                        except subprocess.CalledProcessError as e:
+                            print(e.output)
         
         # Transfert ogr2ogr des données de base présentes dans les schémas de production : diffusion, observatoire, travail
+        """
         os.chdir(QGISBINPATH)
         tables_dependencies = [
             'diffusion.batiment',
@@ -149,20 +160,25 @@ if clean_schema:
             'diffusion.parcelle_cadastrale',
             'diffusion.parcelle_cadastrale_stat',
             'observatoire.rpls_logement',
-            'travail.parcelle_cadastrale_75_2022'
+            'diffusion.parcelle_cadastrale'
         ]
-
+        """
         # Import des sources URL - ne fonctionne que pour des ZIP, avec un seul fichier dans le ZIP (à améliorer)
         # obj['src'] correspond à l'URL
         # obj['extract'] correspond au nom du fichier à extraire (on ne peut donc extraire qu'un fichier de l'archive) 
         # obj['out'] correspond au point d'arrivée dans la BDD PostgreSQL
+        if PATHSOURCE:
+            download_folder = PATHSOURCE
+        else: 
+            download_folder = 'C:/data'
+
         urlImport = [
             { 'src': 'https://files.data.gouv.fr/insee-sirene/StockUniteLegale_utf8.zip', 'extract': 'StockUniteLegale_utf8.csv', 'out': 'donnees_bases.sirene_insee_ul' },
             { 'src': 'https://files.data.gouv.fr/insee-sirene/StockEtablissement_utf8.zip', 'extract': 'StockEtablissement_utf8.csv', 'out': 'donnees_bases.sirene_insee_etab' },
         ]
 
-        if not os.path.exists(os.path.join(PATHSOURCE, 'downloads')):
-            os.mkdir(os.path.join(PATHSOURCE, 'downloads'))
+        if not os.path.exists(os.path.join(download_folder, 'downloads')):
+            os.mkdir(os.path.join(download_folder, 'downloads'))
 
         def download_file_to_memory(url):
             print('Téléchargement de {0}'.format(url))
@@ -170,8 +186,8 @@ if clean_schema:
                 return io.BytesIO(response.read())
 
         def extract_all(packed_format):
-            print('Extraction dans {0}/downloads'.format(PATHSOURCE))
-            packed_format.extractall(path = os.path.join(PATHSOURCE, 'downloads'))
+            print('Extraction dans {0}/downloads'.format(download_folder))
+            packed_format.extractall(path = os.path.join(download_folder, 'downloads'))
 
         def extract_zip(byte_obj):
             with zipfile.ZipFile(byte_obj) as zip:
@@ -187,11 +203,11 @@ if clean_schema:
             try:
                 # Import des données Sirene UL
                 print('Import de {0}'.format(el['extract']))
-                subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), '{0}/downloads/{1}'.format(PATHSOURCE, el['extract']), '-overwrite', '-nln', el['out']])
+                subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), '{0}/downloads/{1}'.format(download_folder, el['extract']), '-overwrite', '-nln', el['out']])
                 print('{0} importé'.format(el['extract']))
             except subprocess.CalledProcessError as e:
                 print(e.output)
-
+        """
         # Import des tables de tables_dependencies
         for t in tables_dependencies:  
             try:
@@ -199,10 +215,10 @@ if clean_schema:
                 if t == 'observatoire.rpls_logement':
                     subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGPRODHOST, PGPRODPORT, PGPRODDB, PGPRODUSER, PGPRODPASSWORD), '-progress', '-lco', 'OVERWRITE=yes', '-lco', 'schema={0}'.format(SCHEMANAME), '-nln', '{0}'.format(t.split('.')[1]), '-sql', "SELECT * FROM {0} WHERE depcom::text like '75%'".format(t)])
                 # Pour les données PC de la mairie (normalement intégrée dans travail..parcelle_cadastrale_75_xxxx)
-                elif t == 'travail.parcelle_cadastrale_75_2022':
-                    subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGPRODHOST, PGPRODPORT, PGPRODDB, PGPRODUSER, PGPRODPASSWORD), '-progress', '-lco', 'OVERWRITE=yes', '-lco', 'schema={0}'.format(SCHEMANAME), '-nln', 'parcelle_cadastrale_mairie_75_{0}'.format(YEAR), '-sql', "SELECT * FROM {0} WHERE c_cainsee::text like '75%'".format(t)])
+                elif t == 'diffusion.parcelle_cadastrale':
+                    subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGPRODHOST, PGPRODPORT, PGPRODDB, PGPRODUSER, PGPRODPASSWORD), '-progress', '-lco', 'OVERWRITE=yes', '-lco', 'schema={0}'.format(SCHEMANAME), '-nln', 'parcelle_cadastrale', '-sql', "SELECT * FROM {0} WHERE c_cainsee::text like '75%'".format(t)])
                 else:
-                    subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGPRODHOST, PGPRODPORT, PGPRODDB, PGPRODUSER, PGPRODPASSWORD), '-progress', '-lco', 'OVERWRITE=yes', '-lco', 'schema={0}'.format(SCHEMANAME), '-nln', '{0}_75_{1}'.format(t.split('.')[1], PREVIOUSYEAR), '-sql', "SELECT * FROM {0} WHERE c_cainsee::text like '75%'".format(t)])
+                    subprocess.check_call(['ogr2ogr', '-f', 'PostgreSQL', "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD), "PG:host={0} port={1} dbname={2} user={3} password={4}".format(PGPRODHOST, PGPRODPORT, PGPRODDB, PGPRODUSER, PGPRODPASSWORD), '-progress', '-lco', 'OVERWRITE=yes', '-lco', 'schema={0}'.format(SCHEMANAME), '-nln', '{0}_{1}'.format(t.split('.')[1], PREVIOUSYEAR), '-sql', "SELECT * FROM {0} WHERE c_cainsee::text like '75%'".format(t)])
 
                 print('{0} importé'.format(t))
             except subprocess.CalledProcessError as e:
@@ -213,7 +229,7 @@ if clean_schema:
         for sqlfile in os.listdir(os.path.join(PATHSQL, '02_creation_tables_finales')):
             pathfile = os.path.join(PATHSQL, '02_creation_tables_finales', sqlfile)
             if os.path.isfile(pathfile):
-                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile != '08_pdl_dgfip.sql':
+                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile != '08_pdl_dgfip.sql' and sqlfile != '05_local_activite_driea_av2017.sql':
                     try:
                         print('Exécution de {0}'.format(pathfile))
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
@@ -225,13 +241,13 @@ if clean_schema:
         for sqlfile in os.listdir(os.path.join(PATHSQL, '03_traitements_proprietaire')):
             pathfile = os.path.join(PATHSQL, '03_traitements_proprietaire', sqlfile)
             if os.path.isfile(pathfile):
-                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile != '05_maj_dictinnaire_apres_categorisation_dgfip.sql':
+                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile != '05_maj_dictionnaire_apres_categorisation.sql':
                     try:
                         print('Exécution de {0}'.format(pathfile))
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                     except subprocess.CalledProcessError as e:
                         print(e.output)
-        print('A vous de jouer maintenant, place à la qualification manuelle des propriétaires (select * from {0}.proprietaire_75_{1}). Une fois la qualification terminée, relancez ce script en répondant "n" à la question "Lancez-vous le script du début ?"'.format(SCHEMANAME, YEAR))
+        print('A vous de jouer maintenant, place à la qualification manuelle des propriétaires (select * from {0}.proprietaire_{1}). Une fois la qualification terminée, relancez ce script en répondant "n" à la question "Lancez-vous le script du début ?"'.format(SCHEMANAME, YEAR))
         
     if not start_script:
 
@@ -242,7 +258,7 @@ if clean_schema:
         for sqlfile in os.listdir(os.path.join(PATHSQL, '03_traitements_proprietaire')):
             pathfile = os.path.join(PATHSQL, '03_traitements_proprietaire', sqlfile)
             if os.path.isfile(pathfile):
-                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile == '05_maj_dictinnaire_apres_categorisation_dgfip.sql':
+                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile == '05_maj_dictionnaire_apres_categorisation.sql':
                     try:
                         print('Exécution de {0}'.format(pathfile))
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
