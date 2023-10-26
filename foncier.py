@@ -86,7 +86,6 @@ if clean_schema:
     if start_script:
         os.chdir(PGBINPATH)
         print('Lancement du script')
-        """
         print('Création des schémas')
         SQLQUERYSCHEMA = ("CREATE SCHEMA IF NOT EXISTS " + str(SCHEMANAME) + "; CREATE SCHEMA IF NOT EXISTS donnees_bases; DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargepropglobal; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargepropglobal (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargpdl; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargpdl (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargenbatglobal; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargenbatglobal (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".charglot; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".charglot (data character varying); DROP TABLE IF EXISTS " + str(SCHEMANAME) + ".chargebatiglobal; CREATE TABLE IF NOT EXISTS " + str(SCHEMANAME) + ".chargebatiglobal (data character varying);")
         try:
@@ -147,7 +146,7 @@ if clean_schema:
                             print(e.output)
         
         # Transfert ogr2ogr des données de base présentes dans les schémas de production : diffusion, observatoire, travail
-        """
+
         os.chdir(QGISBINPATH)
         tables_dependencies = [
             'diffusion.batiment',
@@ -162,7 +161,6 @@ if clean_schema:
             'observatoire.rpls_logement',
             'diffusion.parcelle_cadastrale'
         ]
-        """
         # Import des sources URL - ne fonctionne que pour des ZIP, avec un seul fichier dans le ZIP (à améliorer)
         # obj['src'] correspond à l'URL
         # obj['extract'] correspond au nom du fichier à extraire (on ne peut donc extraire qu'un fichier de l'archive) 
@@ -207,7 +205,6 @@ if clean_schema:
                 print('{0} importé'.format(el['extract']))
             except subprocess.CalledProcessError as e:
                 print(e.output)
-        """
         # Import des tables de tables_dependencies
         for t in tables_dependencies:  
             try:
@@ -223,7 +220,6 @@ if clean_schema:
                 print('{0} importé'.format(t))
             except subprocess.CalledProcessError as e:
                 print(e.output)
-
         os.chdir(PGBINPATH)
         print('Exécution des scripts SQL 02_creation_tables_finales')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '02_creation_tables_finales')):
@@ -253,18 +249,16 @@ if clean_schema:
 
         print('Exécution du script à partir de la qualification manuelle des propriétaires')
         os.chdir(PGBINPATH)    
-
         print('Exécution des scripts SQL 03_traitements_proprietaire')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '03_traitements_proprietaire')):
             pathfile = os.path.join(PATHSQL, '03_traitements_proprietaire', sqlfile)
             if os.path.isfile(pathfile):
-                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile == '05_maj_dictionnaire_apres_categorisation.sql':
+                if (sqlfile.startswith("0") and sqlfile.endswith(".sql")) and sqlfile == '05_maj_dictionnaire_apres_categorisation_dgfip.sql':
                     try:
                         print('Exécution de {0}'.format(pathfile))
                         subprocess.check_call(['psql', '-U', PGUSER, '-h', PGHOST, '-p', PGPORT, '-d', PGDB, '-f', pathfile, '-v', 'schemaname={0}'.format(SCHEMANAME), '-v', 'annee={0}'.format(YEAR), '-v', 'previousyear={0}'.format(PREVIOUSYEAR)])
                     except subprocess.CalledProcessError as e:
                         print(e.output)
-        
         print('Exécution des scripts SQL 04_tables_stat')
         for sqlfile in os.listdir(os.path.join(PATHSQL, '04_tables_stat')):
             pathfile = os.path.join(PATHSQL, '04_tables_stat', sqlfile)
